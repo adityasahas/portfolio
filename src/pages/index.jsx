@@ -2,6 +2,7 @@ import Head from 'next/head'
 import LandingSection  from '@/components/landing'
 import AboutMeSection from '@/components/about'
 import OrganizationsSection from '@/components/organizations'
+import ProjectsSection from '@/components/projects'
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
       <LandingSection />
       <AboutMeSection />
       <OrganizationsSection />
+      <ProjectsSection />
     </>
   )
 }
