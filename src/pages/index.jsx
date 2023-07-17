@@ -3,6 +3,8 @@ import LandingSection  from '@/components/landing'
 import AboutMeSection from '@/components/about'
 import OrganizationsSection from '@/components/organizations'
 import ProjectsSection from '@/components/projects'
+import ContactSection from '@/components/contact'
+import Footer from '@/components/footer' 
 export default function Home() {
   return (
     <>
@@ -16,6 +18,8 @@ export default function Home() {
       <AboutMeSection />
       <OrganizationsSection />
       <ProjectsSection />
+      <ContactSection />
+      <Footer />
     </>
   )
 }
