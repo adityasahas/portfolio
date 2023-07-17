@@ -15,10 +15,10 @@ const LandingSection = () => {
             }}
         >
             <Text h1>
-                Hi, I'm Aditya Sahasranam
+                hi, i'm aditya sahasranam.
             </Text>
-            <Text h3 light>
-                Full-Stack Developer | Tech Enthusiast | Hackathon Winner
+            <Text h3 >
+                learning. coding. building. deploying. flying.
             </Text>
             <Button 
                 shadow

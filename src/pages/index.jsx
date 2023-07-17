@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import LandingSection  from '@/components/landing'
-
-
+import AboutMeSection from '@/components/about'
+import OrganizationsSection from '@/components/organizations'
 export default function Home() {
   return (
     <>
@@ -12,6 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LandingSection />
+      <AboutMeSection />
+      <OrganizationsSection />
     </>
   )
 }
