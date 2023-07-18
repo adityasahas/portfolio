@@ -48,9 +48,9 @@ const ContactSection = () => {
       <div style={{ flex: 1}}>
         <Text h2>more info</Text>
         <Spacer y={1} />
-        <Text>Email: contact@adityasahas.tech</Text>
+        <Text>Email: <code>contact@adityasahas.tech</code></Text>
         <Spacer y={0.5} />
-        <Text>Discord: bababooeyfr</Text>
+        <Text>Discord: <code>bababooeyfr</code></Text>
         <Spacer y={0.5} />
       </div>
     </div>
