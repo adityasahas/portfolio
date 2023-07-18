@@ -1,5 +1,6 @@
-// Import dependencies
 import { Card, Grid, Text, Link, Container, Avatar } from "@nextui-org/react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const organizations = [
   {
@@ -26,6 +27,20 @@ const organizations = [
 ];
 
 const OrganizationsSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+  });
+
+  const animationControl = useAnimation();
+
+  if (inView) {
+    animationControl.start({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    });
+  }
+
   return (
     <Container
       fluid
@@ -40,29 +55,33 @@ const OrganizationsSection = () => {
       <Grid.Container gap={2} justify="center" style={{display: 'flex'}}>
         {organizations.map((org, index) => (
           <Grid key={index} style={{display: 'flex'}}>
-            <Card css={{ p: "$6", mw: "400px", flex: 1 }}>
-              <Card.Header>
-                <img squared alt={org.name} src={org.img} width="34px" height="34px" />
-                <Grid.Container css={{ pl: "$6" }}>
-                  <Grid xs={12}>
-                    <Text h4 css={{ lineHeight: "$xs" }}>
-                      {org.name}
-                    </Text>
-                  </Grid>
-                  <Grid xs={12}>
-                    <Text>{org.role}</Text>
-                  </Grid>
-                </Grid.Container>
-              </Card.Header>
-              <Card.Body css={{ py: "$2" }}>
-                <Text>{org.desc}</Text>
-              </Card.Body>
-              <Card.Footer>
-                <Link block isExternal color="primary" target="_blank" href={org.link}>
-                  Visit Website
-                </Link>
-              </Card.Footer>
-            </Card>
+            <motion.div ref={ref} initial={{ opacity: 0, y: -100 }} animate={animationControl}>
+              <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <Card css={{ p: "$6", mw: "400px", flex: 1 }}>
+                  <Card.Header>
+                    <img squared alt={org.name} src={org.img} width="34px" height="34px" />
+                    <Grid.Container css={{ pl: "$6" }}>
+                      <Grid xs={12}>
+                        <Text h4 css={{ lineHeight: "$xs" }}>
+                          {org.name}
+                        </Text>
+                      </Grid>
+                      <Grid xs={12}>
+                        <Text>{org.role}</Text>
+                      </Grid>
+                    </Grid.Container>
+                  </Card.Header>
+                  <Card.Body css={{ py: "$2" }}>
+                    <Text>{org.desc}</Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Link block isExternal color="primary" target="_blank" href={org.link}>
+                      Visit Website
+                    </Link>
+                  </Card.Footer>
+                </Card>
+              </div>
+            </motion.div>
           </Grid>
         ))}
       </Grid.Container>

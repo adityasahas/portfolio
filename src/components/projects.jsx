@@ -183,7 +183,7 @@ const ProjectsSection = () => {
       >
         <Text h2>my projects</Text>
       </Container>
-      <Modal open={isOpen} onClose={handleCloseModal}>
+      <Modal blur closeButton open={isOpen} onClose={handleCloseModal}>
         <Modal.Header>{currentProject?.name}</Modal.Header>
         <Modal.Body>
           <Text p>{currentProject?.desc}</Text>
