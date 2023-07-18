@@ -6,7 +6,7 @@ const organizations = [
   {
     name: "Tech Optimum",
     role: "Chief Operating Officer",
-    img: "https://file.notion.so/f/s/cc66325a-9141-4580-8794-96d29473e013/Untitled.png?id=5cce5785-8dae-493d-965f-b8a32b714dc6&table=block&spaceId=429cde19-2fdd-4ed2-8a3a-21d2d677453f&expirationTimestamp=1689660000000&signature=i1zLxM98JHj4bS1Wwc4FqJlbtD_LpQsscNzIM31VrD4&downloadName=Untitled.png",
+    img: "to.png",
     link: "https://techoptimum.org",
     desc: "Tech Optimum is a 501(c)(3) nonprofit organization that aims to provide free STEM education to underprivileged students. We have 10+ courses and are looking to expand our reach."
   },
