@@ -1,4 +1,4 @@
-import { Input, Text, Divider, Spacer, Textarea } from "@nextui-org/react";
+import { Input, Text, Divider, Spacer, Textarea, Button } from "@nextui-org/react";
 
 const ContactSection = () => {
   return (
@@ -13,9 +13,11 @@ const ContactSection = () => {
       }}
     >
       <div style={{ alignItems:"center", flex: 1, padding: "0 2em" }}>
+      <form action="https://getform.io/f/7259a8ca-f9e7-4605-baf0-5b41fffd3909" method="POST">
         <Text h2>contact me</Text>
         <Spacer y={2} />
         <Input
+          name="name"
           clearable
           underlined
           labelPlaceholder="Name"
@@ -25,6 +27,7 @@ const ContactSection = () => {
         />{" "}
         <Spacer y={2} />
         <Input
+          name="email"
           clearable
           underlined
           labelPlaceholder="Email"
@@ -33,11 +36,14 @@ const ContactSection = () => {
 
         />{" "}        <Spacer y={2} />
         <Textarea
+          name="message"
           bordered
           color="primary"
           labelPlaceholder="Message"
           width="70%"
         />
+      <Button css={{marginTop:"10px"}} color="success" type="submit">Send</Button>
+      </form>
       </div>
       <div style={{ flex: 1}}>
         <Text h2>more info</Text>
