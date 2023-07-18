@@ -48,7 +48,7 @@ const ProjectsSection = () => {
     {
       id: 7,
       keyword: "Machine Learning",
-      name: "Python Sign Language to Language",
+      name: "Python ASL to Language",
       img: "https://w0.peakpx.com/wallpaper/831/927/HD-wallpaper-python-programming-syntax-python-code-computer-programming-syntax.jpg",
     },
     {
@@ -79,7 +79,7 @@ const ProjectsSection = () => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <Card css={{ w: "100%", h: "400px" }}>
+        <Card css={{ w: "100%", h: "300px" }}>
           <Card.Header
             css={{ position: "absolute", zIndex: 1, top: 5, left: 5 }}
           >
