@@ -169,7 +169,6 @@ const ProjectsSection = () => {
   const projectRows = rows.map((row, idx) =>
     projects.slice(idx * 3, idx * 3 + 3)
   );
-
   return (
     <>
       <Container
@@ -193,23 +192,51 @@ const ProjectsSection = () => {
           <Button passive onClick={handleCloseModal}>
             Close
           </Button>
-          <Link block color isExternal href={currentProject?.link} target="_blank">
-            Visit Website
-          </Link>
+          {currentProject?.link ? (
+              <Link
+                block
+                isExternal
+                icon
+                color="primary"
+                target="_blank"
+                href={currentProject?.link}
+              >
+                Website
+              </Link>
+            ) : (
+              <Text color="gray">No link</Text>
+            )}
         </Modal.Footer>
       </Modal>
-      <div style={{ width: "65%", margin: "0 auto" }}>
+      <div className="project-container">
         {projectRows.map((row, idx) => (
-          <div
-            key={idx}
-            style={{ display: "flex", justifyContent: "space-between" }}
-          >
+          <div className="project-row" key={idx}>
             {row.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
           </div>
         ))}
       </div>
+      <style jsx>{`
+        .project-container {
+          width: 65%;
+          margin: 0 auto;
+        }
+
+        .project-row {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+          .project-row {
+            flex-direction: column;
+          }
+          .project-container {
+            width: 100% !important;
+          }
+        }
+      `}</style>
     </>
   );
 };
