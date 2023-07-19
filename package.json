@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.13",
+    "@vercel/analytics": "^1.0.1",
     "framer-motion": "^10.12.22",
     "next": "13.4.10",
     "next-themes": "^0.2.1",

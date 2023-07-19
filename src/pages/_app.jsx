@@ -1,7 +1,7 @@
 import { createTheme, NextUIProvider, Switch, useTheme } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useTheme as useNextTheme } from 'next-themes'
-
+import { Analytics } from '@vercel/analytics/react'
 const lightTheme = createTheme({
   type: "light",
   theme: {},
@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }) {
     >
       <NextUIProvider>
         <Component {...pageProps} />
+        <Analytics/>
       </NextUIProvider>
     </NextThemesProvider>
   );
