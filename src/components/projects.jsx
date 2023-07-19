@@ -98,10 +98,10 @@ const ProjectsSection = () => {
             css={{ position: "absolute", zIndex: 1, top: 5, left: 5 }}
           >
             <div>
-              <Badge disableOutline variant="flat">
+              <Badge style={{textTransform: "lowercase"}} disableOutline variant="flat">
                 {project.keyword}
               </Badge>
-              <Text h3 color="white">
+              <Text style={{textTransform: "lowercase"}}  h3 color="white">
                 {project.name}
               </Text>
             </div>
@@ -136,10 +136,10 @@ const ProjectsSection = () => {
                 target="_blank"
                 href={project.link}
               >
-                Visit Website
+                visit website
               </Link>
             ) : (
-              <Text color="gray">No link</Text>
+              <Text color="gray">no link</Text>
             )}
             <Button
               auto
@@ -201,10 +201,10 @@ const ProjectsSection = () => {
                 target="_blank"
                 href={currentProject?.link}
               >
-                Website
+                website
               </Link>
             ) : (
-              <Text color="gray">No link</Text>
+              <Text color="gray">no link</Text>
             )}
         </Modal.Footer>
       </Modal>

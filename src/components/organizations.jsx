@@ -62,20 +62,20 @@ const OrganizationsSection = () => {
                     <img squared alt={org.name} src={org.img} width="34px" height="34px" />
                     <Grid.Container css={{ pl: "$6" }}>
                       <Grid xs={12}>
-                        <Text h4 css={{ lineHeight: "$xs" }}>
+                        <Text style={{textTransform: "lowercase"}} h4 css={{ lineHeight: "$xs" }}>
                           {org.name}
                         </Text>
                       </Grid>
                       <Grid xs={12}>
-                        <Text>{org.role}</Text>
+                        <Text style={{textTransform: "lowercase"}} >{org.role}</Text>
                       </Grid>
                     </Grid.Container>
                   </Card.Header>
                   <Card.Body css={{ py: "$2" }}>
-                    <Text>{org.desc}</Text>
+                    <Text style={{textTransform: "lowercase"}} >{org.desc}</Text>
                   </Card.Body>
                   <Card.Footer>
-                    <Link block isExternal color="primary" target="_blank" href={org.link}>
+                    <Link style={{textTransform: "lowercase"}} block isExternal color="primary" target="_blank" href={org.link}>
                       Visit Website
                     </Link>
                   </Card.Footer>

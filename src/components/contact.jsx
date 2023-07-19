@@ -48,7 +48,7 @@ const ContactSection = () => {
             name="name"
             clearable
             underlined
-            labelPlaceholder="Name"
+            labelPlaceholder="name"
             color="primary"
             width="65%"
           />{" "}
@@ -57,7 +57,7 @@ const ContactSection = () => {
             name="email"
             clearable
             underlined
-            labelPlaceholder="Email"
+            labelPlaceholder="email"
             color="primary"
             width="65%"
 
@@ -67,13 +67,13 @@ const ContactSection = () => {
             name="message"
             bordered
             color="primary"
-            labelPlaceholder="Message"
+            labelPlaceholder="message"
             width="90%"
 
           />
           <Spacer y={2} />
-          <Button css={{ marginTop: "10px" }} color="success" type="submit">
-            Send
+          <Button shadow css={{ marginTop: "10px" }} color="success" type="submit">
+            send
           </Button>
         </form>
       </motion.div>
