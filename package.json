@@ -12,6 +12,7 @@
     "@nextui-org/react": "^1.0.0-beta.13",
     "@vercel/analytics": "^1.0.1",
     "framer-motion": "^10.12.22",
+    "lottie-react": "^2.4.0",
     "next": "13.4.10",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
