@@ -136,7 +136,7 @@ const ProjectsSection = () => {
                 target="_blank"
                 href={project.link}
               >
-                visit website
+                website
               </Link>
             ) : (
               <Text color="gray">no link</Text>
