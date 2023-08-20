@@ -11,6 +11,12 @@ import {
 
 const ProjectsSection = () => {
   const projects = [
+    {id: 0,
+    keyword: "Startup",
+  name: "Perceptify",
+img: "p.png",
+link: "https://joinperceptify.com",
+desc: "Powerful relevance and sentiment analytics for brand performance. Data-driven, actionable insights and recommendations for marketing strategies. Streamlined integrations and customization. A beautifully refreshing and seamless take on marketing infrastructure, built for you."},
     {
       id: 1,
       keyword: "Hackathon Website",
@@ -146,7 +152,7 @@ const ProjectsSection = () => {
               color="primary"
               onClick={() => handleOpenModal(project)}
             >
-              About this project
+              about this project
             </Button>
           </Card.Footer>{" "}
         </Card>
@@ -185,12 +191,12 @@ const ProjectsSection = () => {
       <Modal blur closeButton open={isOpen} onClose={handleCloseModal}>
         <Modal.Header>{currentProject?.name}</Modal.Header>
         <Modal.Body>
-          <Text p>{currentProject?.desc}</Text>
+          <Text transform="lowercase" p>{currentProject?.desc}</Text>
         </Modal.Body>
 
         <Modal.Footer>
           <Button passive onClick={handleCloseModal}>
-            Close
+            close
           </Button>
           {currentProject?.link ? (
               <Link
