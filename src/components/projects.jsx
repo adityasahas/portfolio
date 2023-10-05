@@ -11,12 +11,30 @@ import {
 
 const ProjectsSection = () => {
   const projects = [
-    {id: 0,
-    keyword: "Startup",
-  name: "Perceptify",
-img: "p.png",
-link: "https://joinperceptify.com",
-desc: "Powerful relevance and sentiment analytics for brand performance. Data-driven, actionable insights and recommendations for marketing strategies. Streamlined integrations and customization. A beautifully refreshing and seamless take on marketing infrastructure, built for you."},
+    {
+      id: 0,
+      keyword: "Startup",
+      name: "Perceptify",
+      img: "p.png",
+      link: "https://joinperceptify.com",
+      desc: "Powerful relevance and sentiment analytics for brand performance. Data-driven, actionable insights and recommendations for marketing strategies. Streamlined integrations and customization. A beautifully refreshing and seamless take on marketing infrastructure, built for you.",
+    },
+    {
+      id: 0,
+      keyword: "nonprofit",
+      name: "Cal Commit",
+      img: "https://www.calcommit.org/bearAbout.jpeg",
+      link: "https://calcommit.org",
+      desc: "Leading a club in the computer science field that aspires to teach students collaboration and teamwork skills through the Git platform. We also plan to teach underprivileged cities and impoverished students.",
+    },
+    {
+      id: 0,
+      keyword: "club website",
+      name: "SP cHess",
+      img: "https://png.pngtree.com/thumb_back/fw800/background/20230703/pngtree-leadership-in-the-game-of-chess-3d-rendered-teamwork-banner-image_3789073.jpg",
+      link: "https://spchess.org",
+      desc: "A website for a club that I am the vice-president of. It is a club that aims to teach students chess and host tournaments.",
+    },
     {
       id: 1,
       keyword: "Hackathon Website",
@@ -80,7 +98,6 @@ desc: "Powerful relevance and sentiment analytics for brand performance. Data-dr
       link: "https://launchpadlabs.pro",
       desc: "A website for a client that sells custom websites and templates. It is a full-stack e-commerce website that uses Stripe for payments and NextJS for the frontend.",
     },
-    
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -104,10 +121,14 @@ desc: "Powerful relevance and sentiment analytics for brand performance. Data-dr
             css={{ position: "absolute", zIndex: 1, top: 5, left: 5 }}
           >
             <div>
-              <Badge style={{textTransform: "lowercase"}} disableOutline variant="flat">
+              <Badge
+                style={{ textTransform: "lowercase" }}
+                disableOutline
+                variant="flat"
+              >
                 {project.keyword}
               </Badge>
-              <Text style={{textTransform: "lowercase"}}  h3 color="white">
+              <Text style={{ textTransform: "lowercase" }} h3 color="white">
                 {project.name}
               </Text>
             </div>
@@ -191,7 +212,9 @@ desc: "Powerful relevance and sentiment analytics for brand performance. Data-dr
       <Modal blur closeButton open={isOpen} onClose={handleCloseModal}>
         <Modal.Header>{currentProject?.name}</Modal.Header>
         <Modal.Body>
-          <Text transform="lowercase" p>{currentProject?.desc}</Text>
+          <Text transform="lowercase" p>
+            {currentProject?.desc}
+          </Text>
         </Modal.Body>
 
         <Modal.Footer>
@@ -199,19 +222,19 @@ desc: "Powerful relevance and sentiment analytics for brand performance. Data-dr
             close
           </Button>
           {currentProject?.link ? (
-              <Link
-                block
-                isExternal
-                icon
-                color="primary"
-                target="_blank"
-                href={currentProject?.link}
-              >
-                website
-              </Link>
-            ) : (
-              <Text color="gray">no link</Text>
-            )}
+            <Link
+              block
+              isExternal
+              icon
+              color="primary"
+              target="_blank"
+              href={currentProject?.link}
+            >
+              website
+            </Link>
+          ) : (
+            <Text color="gray">no link</Text>
+          )}
         </Modal.Footer>
       </Modal>
       <div className="project-container">

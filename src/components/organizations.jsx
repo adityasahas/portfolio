@@ -8,21 +8,21 @@ const organizations = [
     role: "Chief Operating Officer",
     img: "to.png",
     link: "https://techoptimum.org",
-    desc: "Tech Optimum is a 501(c)(3) nonprofit organization that aims to provide free STEM education to underprivileged students. We have 10+ courses and are looking to expand our reach."
+    desc: "Tech Optimum is a 501(c)(3) nonprofit organization that aims to provide free STEM education to underprivileged students. We have 10+ courses and are looking to expand our reach.",
   },
   {
-    name: "Sierra Pacific STEM Club",
-    role: "Founder/President | Chief Technology Officer",
-    img: "https://spstem.com/stem.png",
-    link: "https://spstem.com",
-    desc: "A High school club that aims to provide free and fun STEM projects to students at Sierra Pacific High School."
+    name: "Perceptify",
+    role: "Chief Operating Officer",
+    img: "/prcptify.jfif",
+    link: "https://joinperceptify.com",
+    desc: "Turning customer data into powerful marketing insights.",
   },
   {
     name: "Cal Commit",
     role: "Vice President | Director of IT",
-    img: "https://calcommit.org/main_files/logo.svg",
+    img: "https://www.calcommit.org/static/media/Cal%20Commit%20Logo.61f1b6550628314ab268e2d58cbca7e9.svg",
     link: "https://calcommit.org",
-    desc: "Leading a club in the computer science field that aspires to teach students collaboration and teamwork skills through the Git platform. We also plan to teach underprivileged cities and impoverished students."
+    desc: "Leading a club in the computer science field that aspires to teach students collaboration and teamwork skills through the Git platform. We also plan to teach underprivileged cities and impoverished students.",
   },
 ];
 
@@ -59,7 +59,7 @@ const OrganizationsSection = () => {
               <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <Card css={{ p: "$6", mw: "400px", flex: 1 }}>
                   <Card.Header>
-                    <img squared alt={org.name} src={org.img} width="34px" height="34px" />
+                    <img style={{borderRadius: "1000px"}} alt={org.name} src={org.img} width="34px" height="34px" />
                     <Grid.Container css={{ pl: "$6" }}>
                       <Grid xs={12}>
                         <Text style={{textTransform: "lowercase"}} h4 css={{ lineHeight: "$xs" }}>
