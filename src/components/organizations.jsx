@@ -8,14 +8,20 @@ const organizations = [
     role: "Chief Operating Officer",
     img: "to.png",
     link: "https://techoptimum.org",
-    desc: "Tech Optimum is a 501(c)(3) nonprofit organization that aims to provide free STEM education to underprivileged students. We have 10+ courses and are looking to expand our reach.",
+    desc: "Tech Optimum is a 501(c)(3) nonprofit organization that aims to provide free STEM education to underprivileged students. We have 20+ courses and are looking to expand our reach.",
   },
   {
     name: "Perceptify",
     role: "Chief Operating Officer",
-    img: "/prcptify.jfif",
+    img: "https://www.joinperceptify.com/logo.svg",
     link: "https://joinperceptify.com",
     desc: "Turning customer data into powerful marketing insights.",
+  },{
+    name: "Launch",
+    role: "Chief Operating Officer",
+    img: "https://launch-site-seven.vercel.app/logo-full.svg",
+    link: "https://launchsite.tech/",
+    desc: "Launch will make your organizations dream website a reality, free of charge. Our team of experienced professionals will make your dream website a reality. Give us a general concept, a layout, or even an existing website. We ll handle the rest.    ",
   },
   {
     name: "Cal Commit",
@@ -24,6 +30,7 @@ const organizations = [
     link: "https://calcommit.org",
     desc: "Leading a club in the computer science field that aspires to teach students collaboration and teamwork skills through the Git platform. We also plan to teach underprivileged cities and impoverished students.",
   },
+  
 ];
 
 const OrganizationsSection = () => {

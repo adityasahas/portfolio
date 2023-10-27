@@ -77,27 +77,14 @@ const ProjectsSection = () => {
     },
     {
       id: 6,
-      keyword: "High School Club",
+      keyword: "club website",
       name: "Sierra Pacific STEM Club",
       img: "https://64.media.tumblr.com/2d5b71f8e25551d9a2568db6343bbbde/b59fd49117f927fe-0a/s540x810/bd71b166b8e6dca63b8421bdd6fed4f274f1c36e.jpg",
       link: "https://spstem.com",
       desc: "A High school club that aims to provide free and fun STEM projects to students at Sierra Pacific High School.",
     },
-    {
-      id: 7,
-      keyword: "Machine Learning",
-      name: "Python ASL to Language",
-      img: "https://w0.peakpx.com/wallpaper/831/927/HD-wallpaper-python-programming-syntax-python-code-computer-programming-syntax.jpg",
-      desc: "A machine learning project that I worked on for fun. It is a program that uses a webcam to detect ASL and translate it to any language of users choice.",
-    },
-    {
-      id: 8,
-      keyword: "E-Commerce",
-      name: "Launchpad Labs",
-      img: "https://wallpapers.com/images/hd/night-city-aesthetic-f2114yshb1p9dmgq.jpg",
-      link: "https://launchpadlabs.pro",
-      desc: "A website for a client that sells custom websites and templates. It is a full-stack e-commerce website that uses Stripe for payments and NextJS for the frontend.",
-    },
+   
+    
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -207,7 +194,7 @@ const ProjectsSection = () => {
           alignItems: "center",
         }}
       >
-        <Text h2>my projects</Text>
+        <Text h2>wall of projects</Text>
       </Container>
       <Modal blur closeButton open={isOpen} onClose={handleCloseModal}>
         <Modal.Header>{currentProject?.name}</Modal.Header>

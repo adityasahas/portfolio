@@ -13,7 +13,7 @@ const Footer = () => {
         marginTop: "2em",
       }}
     >
-      <Text style={{textTransform: "lowercase"}} color="white">
+      <Text style={{textTransform: "lowercase"}} >
         &copy; {currentYear} <Link href="https://adityasahas.tech">https://adityasahas.tech</Link>. All Rights Reserved.
       </Text>
     </div>
