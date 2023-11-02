@@ -132,8 +132,6 @@ const ProjectsSection = () => {
           <Card.Footer
             isBlurred
             css={{
-              position: "absolute",
-              borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
               bottom: 0,
               zIndex: 1,
               display: "flex",
